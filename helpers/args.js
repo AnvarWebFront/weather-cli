@@ -17,4 +17,4 @@ const getArgs = (args) => {
 
 
 }
-module.exports = getArgs
+export  default getArgs
