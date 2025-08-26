@@ -2,11 +2,16 @@ import fs from 'fs'
 import os from 'os'; // opetation system
 import path from 'path'
 const filePath = path.join(os.homedir(), 'key-value-store.json');
+const TOKEN_DICTIONARY = {
+	'token':'token',
+	'city':'city'
+}
+
 const saveKeyValue =  async (key, value) => {	
 	let data ={}
 
 	if(await isExist(filePath)){
-		const file  = await fs.promises.readFile(filePath);
+		let file  = await fs.promises.readFile(filePath);
 		data = JSON.parse(file);
 	}
 	data[key] = value;
@@ -32,4 +37,5 @@ const isExist = async(path)=>{
 			return false
 		}
 	}
-export { saveKeyValue, getKeyValue }
+export { getKeyValue, saveKeyValue, TOKEN_DICTIONARY }
+
