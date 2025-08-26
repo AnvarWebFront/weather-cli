@@ -19,6 +19,7 @@ const saveToken = async(token)=>{
 }
 const startCli =()=>{
 	const args = getArgs(process.argv);
+	console.log(process.env)
 	
 	if(args.h){
 		// help
@@ -35,7 +36,7 @@ const startCli =()=>{
 		return saveToken(args.t)
 	}
 	// result
-	getWeather('Paris')
+	getWeather(process.env.CITY ?? 'Uzbekistan')
 }
 
 startCli();
