@@ -20,8 +20,6 @@ const saveToken = async(token)=>{
 const startCli =()=>{
 	const args = getArgs(process.argv);
 	
-	
-
 	if(args.h){
 		// help
 		printHelp();
@@ -37,7 +35,7 @@ const startCli =()=>{
 		return saveToken(args.t)
 	}
 	// result
-	getWeather('uzbekistan')
+	getWeather('Paris')
 }
 
 startCli();
