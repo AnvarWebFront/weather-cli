@@ -1,7 +1,7 @@
 import fs from 'fs'
 import os from 'os'; // opetation system
 import path from 'path'
-const filePath = path.join(os.homedir(), 'key-value-store.json');
+const filePath = path.join(os.homedir(), 'weather-data.json');
 const TOKEN_DICTIONARY = {
 	'token':'token',
 	'city':'city'
